@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "2cf5eea4-ee92-40d1-9041-d1a1367b59a4",
+		"name": "GroceryBookingSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11169142"
+	},
+	"item": [
+		{
+			"name": "Admin Api's",
+			"item": [
+				{
+					"name": "GetAllGroceryItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/grocery-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"grocery-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddGroceryItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Salt\",\n    \"price\" : 20.00,\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/grocery-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"grocery-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveGroceryItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/grocery-items/{itemId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"grocery-items",
+								"{itemId}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateGroceryItems",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Salt\",\n    \"price\" : 20.00,\n    \"quantity\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/grocery-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"grocery-items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Api's",
+			"item": [
+				{
+					"name": "place order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n    \"name\" : \"Salt\",\n    \"price\" : 20.00,\n    \"quantity\": 1,\n    \"id\":\"1\"\n    },\n    {\n    \"name\" : \"Salt\",\n    \"price\" : 20.00,\n    \"quantity\": 1,\n    \"id\":\"1\"\n}\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/orders/createOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllGroceryItems Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/grocery-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"grocery-items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
